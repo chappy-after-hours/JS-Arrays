@@ -162,7 +162,19 @@ reverse(str);
 
   //Code Here
 function removeItem(list, item) {
+for (var i =list.length-1; i>=0;i--) {
+  if (list[i] === item) {
+    list.splice(i,1);
+  }
+}
+return list;
+}
 
+function addItem(list, item) {
+  if (!list.includes(item)) {
+    list.push(item);
+  }
+  return list;
 }
 
 var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
