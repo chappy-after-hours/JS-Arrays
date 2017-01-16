@@ -225,7 +225,13 @@ for(var i = 0; i < num2; i++){
 //Write a function called 'longer' that is given arr1 and arr2 as it's only arguments. Return the array which is longest.
 
   //Code Here
+function longer(arr1, arr2) {
+  if (arr1.length > arr2.length) {
+    return arr1;
+  } else return arr2;
+}
 
+longer(arr1, arr2);
 
 /*As a continuation of the previous problem, write another function called 'both'.
   Your 'both' function will be given two arguments, arr1 and arr2 (from the previous example).
@@ -234,9 +240,19 @@ for(var i = 0; i < num2; i++){
 */
 
   //Code Here
+function both(arr1, arr2) {
+  newArray = [];
+  for (var i=0; i<arr1.length; i++) {
+    for (var j=0;j<arr2.length;j++) {
+      if (arr1[i] === arr2[j] && !newArray.includes(arr1[i])) {
+        newArray.push(arr1[i]);
+      }
+    }
+  }
+  return newArray;
+}
 
-
-
+both(arr1,arr2);
 
 //NEXT PROBLEM
 
