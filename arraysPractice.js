@@ -85,7 +85,20 @@ var numbersArray = [1,2,34,54,55,34,32,11,19,17,54,66,13];
 
 
   //Code Here
+function divider(arr) {
+  var dividedArr = [[],[]];
+  for (var i=arr.length-1; i>=0; i--) {
+    if (arr[i] % 2 === 0) {
+      dividedArr[0].push(arr[i]);
+    } else {
+      dividedArr[1].push(arr[i]);
+    }
+  }
 
+  return dividedArr;
+}
+
+divider(numbersArray);
 
 //Next Problem
 
